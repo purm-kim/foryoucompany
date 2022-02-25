@@ -1,0 +1,80 @@
+// 에스코어드림
+@font-face {
+  font-family: 'S-CoreDream-4Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// 나눔스퀘어라운드
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+// BreakPoints
+@mixin mq($point) {
+  @if $point == pc {
+    @media (min-width: 2000px) {
+      @content;
+    }
+  }
+  @if $point == tablet_pc {
+    @media (min-width: 769px) and (max-width:1999px){
+      @content;
+    }
+  }
+  @if $point == mobile {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
+.hidden-xs {
+  @include mq(mobile) {
+    display: none;
+  }
+}
+.visible-xs{
+  display: none;
+  @include mq(mobile){
+    display: block;
+  }
+}
+
+
+*{
+  box-sizing: border-box;
+  font-family: 'Spoqa Han Sans Neo' , 'sans-serif';
+  font-weight: normal;
+  scroll-behavior: smooth;
+}
+html, body{
+  margin:0;
+  padding: 0;
+  font-size: 6.25%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  @include mq(mobile){
+    font-size: 0.2vw;
+    overflow-x: hidden;
+  }
+}
+a, em, b, i, q, address{
+  text-decoration: none;
+  font-style: normal;
+  color:#000;
+}
+p, h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
+ul, li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
