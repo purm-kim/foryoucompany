@@ -1,9 +1,9 @@
 <!-- 헤더시작 -->
-<header>
+<header id="header">
     <div class="logo_wrap">
-      <img>
+      <img src="" alt="">
     </div>
-    <ul>
+    <ul class="gnb">
       <li>
         <a href="#part01">
           사은품혜택
